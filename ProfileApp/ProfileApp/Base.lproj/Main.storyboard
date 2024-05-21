@@ -454,7 +454,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMx-gj-XxM">
-                                                <rect key="frame" x="95.666666666666686" y="368.66666666666669" width="200" height="30"/>
+                                                <rect key="frame" x="96.666666666666686" y="368.66666666666669" width="200" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWB-hN-zlI">
                                                         <rect key="frame" x="100" y="0.0" width="100" height="30"/>
@@ -493,31 +493,32 @@
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="DDv-ua-tAv"/>
-                                                    <constraint firstAttribute="width" constant="200" id="es9-ck-9aL"/>
+                                                    <constraint firstAttribute="width" constant="200" id="2Df-8b-7FD"/>
+                                                    <constraint firstAttribute="height" constant="30" id="ZJv-MH-J8h"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="gMx-gj-XxM" firstAttribute="leading" secondItem="wC4-wq-BCe" secondAttribute="leading" constant="95.5" id="1uY-ve-Mmj"/>
                                             <constraint firstItem="uq5-Yu-tmd" firstAttribute="leading" secondItem="wC4-wq-BCe" secondAttribute="leading" constant="30" id="7FR-h9-DTz"/>
                                             <constraint firstAttribute="trailing" secondItem="l2X-u6-XwE" secondAttribute="trailing" constant="30" id="9T6-mz-Pul"/>
+                                            <constraint firstItem="gMx-gj-XxM" firstAttribute="leading" secondItem="wC4-wq-BCe" secondAttribute="leading" constant="96.5" id="DVM-z4-Mn6"/>
                                             <constraint firstAttribute="height" constant="1000" id="IAQ-LE-Ztw"/>
                                             <constraint firstItem="l2X-u6-XwE" firstAttribute="leading" secondItem="wC4-wq-BCe" secondAttribute="leading" constant="30" id="M1O-sV-5TN"/>
                                             <constraint firstItem="pV0-JA-1kD" firstAttribute="top" secondItem="TmM-HM-MVf" secondAttribute="bottom" id="N8M-kh-mp4"/>
                                             <constraint firstItem="uq5-Yu-tmd" firstAttribute="top" secondItem="pV0-JA-1kD" secondAttribute="bottom" constant="3" id="Nrg-WJ-raG"/>
                                             <constraint firstAttribute="trailing" secondItem="pV0-JA-1kD" secondAttribute="trailing" constant="30" id="Ofi-YR-Ib4"/>
                                             <constraint firstAttribute="trailing" secondItem="nDz-if-eDe" secondAttribute="trailing" constant="30" id="QWS-IN-So4"/>
-                                            <constraint firstAttribute="trailing" secondItem="gMx-gj-XxM" secondAttribute="trailing" constant="95.5" id="UY9-0o-G55"/>
                                             <constraint firstAttribute="trailing" secondItem="TmM-HM-MVf" secondAttribute="trailing" constant="30" id="YiI-86-kVO"/>
                                             <constraint firstItem="TmM-HM-MVf" firstAttribute="leading" secondItem="wC4-wq-BCe" secondAttribute="leading" constant="30" id="YyB-pG-Bhv"/>
                                             <constraint firstAttribute="trailing" secondItem="uq5-Yu-tmd" secondAttribute="trailing" constant="30" id="aew-Ms-JYn"/>
                                             <constraint firstItem="pV0-JA-1kD" firstAttribute="leading" secondItem="wC4-wq-BCe" secondAttribute="leading" constant="30" id="bE2-eB-HYn"/>
                                             <constraint firstItem="TmM-HM-MVf" firstAttribute="top" secondItem="wC4-wq-BCe" secondAttribute="top" constant="10" id="fmt-ig-34O"/>
+                                            <constraint firstAttribute="trailing" secondItem="gMx-gj-XxM" secondAttribute="trailing" constant="96.5" id="gf9-Wl-d7s"/>
+                                            <constraint firstItem="gMx-gj-XxM" firstAttribute="top" secondItem="nDz-if-eDe" secondAttribute="bottom" constant="12" id="jQw-gB-KWS"/>
                                             <constraint firstItem="nDz-if-eDe" firstAttribute="top" secondItem="l2X-u6-XwE" secondAttribute="bottom" constant="6" id="kS0-pY-v1u"/>
                                             <constraint firstItem="l2X-u6-XwE" firstAttribute="top" secondItem="uq5-Yu-tmd" secondAttribute="bottom" constant="30" id="kgK-CN-7rX"/>
-                                            <constraint firstItem="gMx-gj-XxM" firstAttribute="top" secondItem="nDz-if-eDe" secondAttribute="bottom" constant="12" id="scO-yg-QUn"/>
+                                            <constraint firstItem="gMx-gj-XxM" firstAttribute="centerX" secondItem="wC4-wq-BCe" secondAttribute="centerX" id="x7I-aC-kvD"/>
                                             <constraint firstItem="nDz-if-eDe" firstAttribute="leading" secondItem="wC4-wq-BCe" secondAttribute="leading" constant="30" id="xCV-TG-EXw"/>
                                         </constraints>
                                     </view>
@@ -739,6 +740,7 @@ iOSアプリ開発を通してエンジニアの学習中。</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="dTa-IR-Ku3"/>
         <segue reference="zwP-pO-zCe"/>
     </inferredMetricsTieBreakers>
     <resources>
