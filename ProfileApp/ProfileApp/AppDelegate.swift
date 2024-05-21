@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
 
-        sleep(1)//スプラッシュ1秒にする
+        sleep(2)//スプラッシュ1秒にする
 
         if #available(iOS 15.0, *) {
             // disable UITab bar transparent
