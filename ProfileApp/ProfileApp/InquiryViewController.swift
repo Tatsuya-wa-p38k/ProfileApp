@@ -1,9 +1,3 @@
-//
-//  InquiryViewController.swift
-//  ProfileApp
-//
-//  Created by spark-06 on 2024/05/20.
-//
 
 import UIKit
 
@@ -24,17 +18,22 @@ class InquiryViewController: UIViewController {
         // Do any additional setup after loading the view.
 
     }
-    
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//        if let confirmViewController = segue.destination as? ConfirmViewController {
+//
+//            if let nameText = self.nameTextField.text, let mailText = self.mailTextField.text, let inquiryText = self.inquiryTextfield.text {
+//                confirmViewController.nameConfirm = nameText,
+//                confirmViewController.mailConfirm = mailText,
+//                confirmViewController.inquiryConfirm = inquiryText
+//            }
+//        }
+//    }
 
     @IBAction func pressButton(_ sender: Any) {
-        if let nameText = nameTextField.text, let mailText = mailTextField.text, let inquiryText = inquiryTextfield.text {
-            if nameText.isEmpty || mailText.isEmpty || inquiryText.isEmpty {
-                inquiryNote.text = "フォームの送信内容に空欄がございます。"
-                inquiryNote.textColor = UIColor.red
-            }
-        }
-    }
 
+    }
 
 
 }
