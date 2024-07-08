@@ -3,7 +3,6 @@ import UIKit
 
 class InquiryViewController: UIViewController {
 
-
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mailTextField: UITextField!
     @IBOutlet weak var inquiryTextfield: UITextField!

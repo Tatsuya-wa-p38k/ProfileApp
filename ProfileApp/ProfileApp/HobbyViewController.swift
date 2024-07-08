@@ -1,8 +1,6 @@
 
 import UIKit
 
-
-
 class HobbyViewController: UIViewController {
 
     @IBOutlet weak var resultFortunes: UILabel!
@@ -12,22 +10,25 @@ class HobbyViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
 
+    @IBOutlet weak var histroyInteriorLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = UIImage(named: images[currentIndex])
+        updateHistoryLabel()
         // Do any additional setup after loading the view.
+    }
 
-        // UIImageViewにタップジェスチャーを追加
-              let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
-        imageView.isUserInteractionEnabled = true
-        imageView
-            .addGestureRecognizer(tapGesture)
+    func updateHistoryLabel() {
+        let historyText = "これまでのインテリアの軌跡 \(currentIndex + 1)/\(images.count)"
+        histroyInteriorLabel.text = historyText
     }
 
     @IBAction func prevButton(_ sender: UIButton) {
         if currentIndex > 0 {
             currentIndex -= 1
             updateImage()
+            animateButton(sender)
         }
     }
 
@@ -35,62 +36,31 @@ class HobbyViewController: UIViewController {
         if currentIndex < images.count - 1 {
             currentIndex += 1
             updateImage()
+            animateButton(sender)
         }
     }
 
     func updateImage() {
-        imageView.image = UIImage(named: images[currentIndex])
+        //nextButtonとprevButtonをタップした際の画像の切り替えの動き
+        UIView.transition(with: imageView,
+                          duration: 0.9,
+                          options: .transitionCrossDissolve,
+                          animations: {
+            self.imageView.image = UIImage(named: self.images[self.currentIndex])
+        },
+                          completion: nil)
+        updateHistoryLabel()
     }
 
-
-
-    @IBAction func pressButtonHosokiKazuko(_ sender: Any) {
-        uranai()
+    func animateButton(_ button: UIButton) {
+        UIView.animate(withDuration: 0.3,
+                       animations: {
+            button.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+        },
+                       completion: { _ in
+            UIView.animate(withDuration: 0.3) {
+                button.transform = CGAffineTransform.identity
+            }
+        })
     }
-
-    @objc func imageTapped() {
-          shakeAnimation()
-      }
-
-    func shakeAnimation() {
-        let shake = CABasicAnimation(keyPath: "position")
-        shake.duration = 0.1
-        shake.repeatCount = 5
-        shake.autoreverses = true
-
-        let fromPoint = CGPoint(x: imageView.center.x - 5, y: imageView.center.y)
-        let toPoint = CGPoint(x: imageView.center.x + 5, y: imageView.center.y)
-        shake.fromValue = NSValue(cgPoint: fromPoint)
-        shake.toValue = NSValue(cgPoint: toPoint)
-
-        imageView.layer.add(shake, forKey: "position")
-    }
-
-
-    func uranai() {
-
-        let fortunesType = [
-            "『素敵な出会いがあるわよ。』",
-            "『悪くないわね。』",
-            "『あなた地獄に堕ちるわよ。』",
-        ]
-
-        let resultFortunesRandom = Int.random(in: 0..<fortunesType.count)
-
-        switch resultFortunesRandom {
-        case 0 :
-            resultFortunes.text = "『素敵な出会いがあるわよ。』"
-        case 1 :
-            resultFortunes.text = "『悪くないわね。』"
-
-        case 2:
-            resultFortunes.text = "『あなた地獄に堕ちるわよ。』"
-        default:
-            break
-        }
-    }
-
-
-
-
 }

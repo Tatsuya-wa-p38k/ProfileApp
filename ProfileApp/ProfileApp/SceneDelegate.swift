@@ -1,9 +1,3 @@
-//
-//  SceneDelegate.swift
-//  ProfileApp
-//
-//  Created by spark-06 on 2024/05/16.
-//
 
 import UIKit
 
