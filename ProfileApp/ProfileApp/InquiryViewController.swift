@@ -28,6 +28,6 @@ class InquiryViewController: UIViewController {
     }
 
     @IBAction func pressButton(_ sender: Any) {
-performSegue(withIdentifier: "showConfirmation", sender: self)
+//performSegue(withIdentifier: "showConfirmation", sender: self)
     }
 }
